@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,600;0,700;0,800;1,100;1,400&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body,
+.time,
+.left-side,
+.right-side,
+.right-top,
+.right-down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digital-clock,
+.time,
+.right-side,
+.right-top,
+.right-down {
+    position: relative;
+}
+
+body {
+    min-height: 70vh;
+    background: #2e2e45;
+}
+
+.digital-clock {
+    color: #fff;
+    background: #2d2f38;
+    width: 420px;
+    padding: 35px 20px;
+    /* box-shadow: 0 5px 25px rgba(14, 21, 38, .8); */
+    border-radius: 10px;
+}
+
+.digital-clock::before {
+    content: '';
+    position: absolute;
+    background: linear-gradient(45deg, blue,
+            orange, red);
+    background-size: 200% 200%;
+    top: -5px;
+    left: -5px;
+    bottom: -5px;
+    right: -5px;
+    z-index: -1;
+    filter: blur(30px);
+    animation: glowing 5s ease infinite;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+#hours {
+    font-weight: 600;
+    padding: 0 10px;
+    line-height: 125px;
+    font-size: 8em;
+    background: -webkit-linear-gradient(90deg, blue, white);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+.right-side {
+    flex-direction: column;
+}
+
+#dots {
+    font-size: 4em;
+    transform: translate(-3px);
+    color: #808080;
+}
+
+#mintues {
+    font-size: 5em;
+    font-weight: 600;
+    margin-left: 10px;
+    transform: translateY(10px);
+    background: -webkit-linear-gradient(90deg, rgb(201, 210, 216), #dd1010);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
+
+
+.right-down {
+    margin: 10px;
+    transform: translate(-25px);
+}
+
+#period,
+#second {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+#period {
+    color: #dd4e1b;
+}
+
+#second {
+    color: #fff;
+}
