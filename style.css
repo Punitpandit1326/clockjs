@@ -119,3 +119,34 @@ body {
 #second {
     color: #fff;
 }
+
+@media (max-width: 480px) {
+    .digital-clock {
+        color: #fff;
+        background: #d5d1d133;
+        width: 300px;
+        margin-top: 50%;
+
+
+    }
+
+    body {
+        background: #000000;
+    }
+
+    #hours {
+
+        background: -webkit-linear-gradient(90deg, rgb(0, 0, 0), white);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+    #mintues {
+
+        /* transform: translateY(10px); */
+        background: -webkit-linear-gradient(90deg, rgb(83, 99, 109), #842929);
+        -webkit-text-fill-color: transparent;
+        -webkit-background-clip: text;
+    }
+
+}
